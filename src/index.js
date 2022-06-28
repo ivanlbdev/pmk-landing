@@ -1,7 +1,9 @@
-import './styles/index.scss'
 import Swiper, {Pagination, Navigation} from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import './styles/index.scss'
+
 
 let plusesBlock = {}
 let plusesBlockInit = false
@@ -37,8 +39,25 @@ document.addEventListener('DOMContentLoaded', () => {
         centeredSlides: true,
 
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next-album',
+            prevEl: '.swiper-button-prev-album',
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+
+    const personSlider = new Swiper('.persons-slider__container', {
+        modules: [Pagination, Navigation],
+        direction: 'horizontal',
+        spaceBetween: 20,
+        centeredSlides: true,
+        slideClass: 'media-block-container',
+
+        navigation: {
+            nextEl: '.swiper-button-next-pers',
+            prevEl: '.swiper-button-prev-pers',
         },
 
         pagination: {
