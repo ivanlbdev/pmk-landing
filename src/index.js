@@ -1,5 +1,5 @@
 import './styles/index.scss'
-import Swiper, {Pagination} from 'swiper'
+import Swiper, {Pagination, Navigation} from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination';
 
@@ -30,6 +30,21 @@ const makePlusesSlider = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     makePlusesSlider()
+    const bigSlider = new Swiper('.block-slider__slider', {
+        modules: [Pagination, Navigation],
+        direction: 'horizontal',
+        spaceBetween: 20,
+        centeredSlides: true,
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
 })
 
 window.addEventListener('resize', () => {
