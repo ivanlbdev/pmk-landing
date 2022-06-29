@@ -1,0 +1,93 @@
+@import "../variables/media";
+
+
+.media-block-container {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+
+  &_a-center {
+    align-items: center;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    &-image {
+      margin-bottom: 62px;
+    }
+
+    &_m-right {
+      margin-right: 80px;
+    }
+
+  }
+
+  &__image {
+    position: relative;
+
+    &-main {
+      z-index: 2;
+      position: relative;
+    }
+
+  }
+
+  &__decor {
+    position: absolute;
+    right: 0;
+  }
+
+}
+
+
+@media (max-width: #{$mediaSM}) {
+  .media-block-container {
+    flex-direction: column;
+
+    &__text {
+      padding: 0 12px !important;
+
+      &-image {
+        margin-bottom: 27px;
+
+        img {
+          width: 146px;
+        }
+
+      }
+
+      &_m-right {
+        margin-right: 0;
+      }
+
+    }
+
+    &__image {
+      display: flex;
+      justify-content: end;
+
+      &-main {
+
+        &_min {
+          width: 90% !important;
+        }
+
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+    .promo-area {
+      margin-top: -90px;
+    }
+
+  }
+}

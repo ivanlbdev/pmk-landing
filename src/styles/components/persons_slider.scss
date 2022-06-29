@@ -1,0 +1,40 @@
+@import "../variables/media";
+
+
+.persons-slider {
+
+  &__container {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__swiper-pagination {
+    display: none;
+  }
+
+  &__nav-arrow {
+    margin-top: 20px;
+    position: relative;
+    height: 30px;
+    width: 120px;
+  }
+
+}
+
+@media (max-width: #{$mediaSM}) {
+  .persons-slider {
+
+    &__slider-wrapper {
+      padding-bottom: 40px;
+    }
+
+    &__swiper-pagination {
+      display: block;
+    }
+
+    &__nav-arrow {
+      display: none;
+    }
+
+  }
+}
