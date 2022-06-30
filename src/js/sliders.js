@@ -62,5 +62,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize', () => {
     makePlusesSlider()
-    console.log('resize')
 })

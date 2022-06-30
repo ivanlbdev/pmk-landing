@@ -1,0 +1,29 @@
+@import "../../variables/media";
+@import "../../variables/colors";
+
+$root: ".pmk-button";
+
+#{$root} {
+  padding: 7px 43px;
+  color: #ffffff;
+  background-color: #{$theme-color};
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  border: 1px dashed #{$theme-color};
+  transition: all ease-in-out .2s;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #{$theme-color};
+  }
+
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    padding: 5px 32px;
+    font-size: 16px;
+  }
+}

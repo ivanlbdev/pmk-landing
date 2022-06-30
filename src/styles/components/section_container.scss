@@ -1,7 +1,8 @@
 @import "../variables/media";
 
+$root: ".section-container";
 
-.section-container {
+#{$root} {
 
   &-header {
 
@@ -35,7 +36,7 @@
 }
 
 @media (max-width: #{$mediaSM}) {
-  .section-container {
+  #{$root} {
 
     &-header {
       padding-top: 30px;

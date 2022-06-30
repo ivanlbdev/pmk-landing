@@ -1,6 +1,8 @@
 @import "../variables/media";
 
-.block-slider {
+$root: ".block-slider";
+
+#{$root} {
   margin-top: 80px;
 
   &__slider {
@@ -61,7 +63,7 @@
 }
 
 @media (max-width: #{$mediaSM}) {
-  .block-slider {
+  #{$root} {
     margin-top: 40px;
 
     &__slider {

@@ -1,3 +1,4 @@
+@import "~normalize.css";
 @import "variables/colors";
 @import "variables/media";
 @import "components/slider";
@@ -7,9 +8,7 @@
 @import "components/block_items";
 @import "components/block_slider";
 @import "components/persons_slider";
-
-$mediaSM: 768px;
-$mediaXS: 0;
+@import "components/ui/pmk_button";
 
 * {
   box-sizing: border-box;
@@ -56,18 +55,6 @@ p, span, a {
 
 }
 
-.pmk-button {
-  padding: 7px 43px;
-  color: #ffffff;
-  background-color: #{$theme-color};
-  text-decoration: none;
-  border-radius: 20px;
-  font-weight: 700;
-  font-size: 24px;
-}
-
-
-
 .promo-area {
   margin: 0 auto;
   position: relative;
@@ -97,8 +84,7 @@ p, span, a {
   }
 
   .pmk-button {
-    padding: 5px 32px;
-    font-size: 16px;
+
   }
 
   .container {

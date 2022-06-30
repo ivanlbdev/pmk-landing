@@ -1,6 +1,9 @@
 @import "../variables/colors";
 
-.swiper-pagination-bullet {
+$button: ".swiper-button";
+$pagination: ".swiper-pagination";
+
+#{$pagination}-bullet {
   background: #ffffff;
   border: 1px solid rgba(44, 62, 80, 0.53);
 
@@ -11,22 +14,22 @@
 
 }
 
-.swiper-button-next, .swiper-button-prev {
+#{$button}-next, #{$button}-prev {
   &:after {
     content: '';
     position: absolute;
   }
 }
 
-.swiper-button-prev {
+#{$button}-prev {
   left: 0;
 }
 
-.swiper-button-next {
+#{$button}-next {
   right: 0;
 }
 
-.swiper-button-prev, .swiper-button-next {
+#{$button}-prev, #{$button}-next {
   width: 25px;
   height: 17px;
 

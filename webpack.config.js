@@ -6,7 +6,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 module.exports = {
-    mode: 'development',
     performance: {
         hints: false,
         maxEntrypointSize: 512000,
@@ -14,10 +13,9 @@ module.exports = {
     },
     devServer: {
         static: {
-            directory: path.resolve(__dirname, './dist'),
+            directory: path.resolve(__dirname, './src'),
         },
-        open: true,
-        hot: true,
+        // contentBase: path.resolve(__dirname, './dist'),
         port: 9010,
     },
     entry: {

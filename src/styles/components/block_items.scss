@@ -1,7 +1,9 @@
 @import "../variables/colors";
 @import "../variables/media";
 
-.block-items {
+$root: ".block-items";
+
+#{$root} {
   position: relative;
   margin-top: -120px;
 
@@ -12,6 +14,7 @@
   &__container {
     display: flex;
     margin: 0 -15px;
+    padding-bottom: 20px;
   }
 
   &__item {
@@ -21,9 +24,12 @@
     background-color: #ffffff;
     border-radius: 30px;
     border: 1px solid rgba(136, 140, 140, 0.4);
+    transition: all ease-in-out .2s;
 
     &:hover {
       background-color: #{$theme-color};
+      border: 1px solid #{$theme-color};
+      box-shadow: 0 4px 7px rgba(0, 58, 64, 0.2);
 
       span {
         color: #ffffff;
@@ -53,7 +59,7 @@
 }
 
 @media (max-width: #{$mediaSM}) {
-  .block-items {
+  #{$root} {
     margin-top: 60px;
 
     .swiper {
@@ -66,6 +72,7 @@
 
     &__container {
       margin: 0;
+      padding-bottom: 0;
     }
 
     &__item {
@@ -80,6 +87,5 @@
       position: relative;
       transition-property: transform;
     }
-
   }
 }

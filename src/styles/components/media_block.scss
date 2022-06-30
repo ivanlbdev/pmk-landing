@@ -1,7 +1,8 @@
 @import "../variables/media";
 
+$root: ".media-block-container";
 
-.media-block-container {
+#{$root} {
   display: flex;
   flex-shrink: 0;
   width: 100%;
@@ -45,7 +46,7 @@
 
 
 @media (max-width: #{$mediaSM}) {
-  .media-block-container {
+  #{$root} {
     flex-direction: column;
 
     &__text {
@@ -83,6 +84,11 @@
         height: 100%;
       }
 
+    }
+
+    &_fix-height {
+      justify-content: space-between;
+      height: 816px;
     }
 
     .promo-area {
