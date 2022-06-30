@@ -3,9 +3,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     performance: {
         hints: false,
         maxEntrypointSize: 512000,
@@ -21,6 +22,7 @@ module.exports = {
     },
     entry: {
         main: path.resolve(__dirname, './src/index.js'),
+        sliders: path.resolve(__dirname, './src/js/sliders.js'),
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -32,6 +34,7 @@ module.exports = {
             filename: 'index.html',
             minify: false,
         }),
+        new CleanWebpackPlugin(),
         // new webpack.HotModuleReplacementPlugin(),
         new CopyPlugin({
             patterns: [
@@ -39,11 +42,10 @@ module.exports = {
                     from: path.resolve(__dirname, 'src/images'),
                     to: path.resolve(__dirname, 'dist/images')
                 },
-                {
-                    from: path.resolve(__dirname, 'src/js'),
-                    to: path.resolve(__dirname, 'dist/js')
-                }
             ]
+        }),
+        new MiniCssExtractPlugin({
+            filename: './style/[name].css'
         })
     ],
     module: {
@@ -63,7 +65,13 @@ module.exports = {
             },
             {
                 test: /\.(scss|css)$/,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    'css-loader',
+                    'sass-loader'
+                ],
             },
         ],
     }
