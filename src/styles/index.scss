@@ -9,6 +9,7 @@
 @import "components/block_slider";
 @import "components/persons_slider";
 @import "components/ui/pmk_button";
+@import "components/ui/promo_area";
 
 * {
   box-sizing: border-box;
@@ -49,24 +50,10 @@ p, span, a {
   }
 
   &_margin-area {
-    margin-top: 39px;
-    margin-bottom: 15px;
+    margin-top: 34px;
+    margin-bottom: 8px;
   }
 
-}
-
-.promo-area {
-  margin: 0 auto;
-  position: relative;
-  width: 1018px;
-  padding: 16px 137px;
-  display: flex;
-  justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 10px rgba(0, 58, 64, 0.2);
-  border-radius: 30px;
-  align-items: center;
-  z-index: 3;
 }
 
 
@@ -83,24 +70,9 @@ p, span, a {
     }
   }
 
-  .pmk-button {
-
-  }
-
   .container {
     width: 100%;
     padding: 0 25px;
-  }
-
-  .promo-area {
-    width: 100%;
-    padding: 26px;
-    flex-direction: column;
-
-    &__header {
-      margin-bottom: 19px;
-    }
-
   }
 
 }

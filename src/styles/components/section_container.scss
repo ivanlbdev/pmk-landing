@@ -7,13 +7,19 @@ $root: ".section-container";
   &-header {
 
     .promo-area {
-      margin-top: -220px;
+      margin-top: -230px;
     }
 
     .media-block-container {
+      justify-content: space-between;
 
       &__text {
-        padding: 50px 50px;
+        padding: 90px 78px;
+
+        &-text {
+          max-width: 365px;
+        }
+
       }
 
     }
@@ -21,12 +27,17 @@ $root: ".section-container";
   }
 
   &-subheader {
-    margin-top: 100px;
+    margin-top: 110px;
 
     .media-block-container {
 
       &__text {
-        margin: 170px 60px;
+        margin: 150px 52px;
+
+        &-text {
+          max-width: 529px;
+        }
+
       }
 
     }
@@ -47,6 +58,11 @@ $root: ".section-container";
 
       .media-block-container__text {
         padding: 0;
+
+        &-text {
+          max-width: 100%;
+        }
+
       }
 
     }
